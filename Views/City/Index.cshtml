@@ -1,0 +1,35 @@
+@model List<GlobalCityManager.Models.City>
+
+    <h1>Todas las Ciudades</h1>
+    @Html.ActionLink("Crear una nueva Ciudad.", "Create")
+    <br>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>País</th>
+            <th>Distrito</th>
+            <th>Población</th>
+            <th>Borrar</th>
+            <th>Editar</th>
+        </tr>
+        @foreach (var ciudad in Model) {
+        <tr>
+            <td>@ciudad.Id</td>
+            <td>@ciudad.Name</td>
+            <td>@ciudad.CountryCodeNavigation.Name</td>
+            <td>@ciudad.District</td>
+            <td>@ciudad.Population</td>
+            <td>
+                @{
+                    if(ciudad.CountryCode == "AAA"){
+                        @Html.ActionLink("Borrar", "Borrar", new {cId = ciudad.Id} )
+                    }
+                    else { <span>--</span> }
+                }
+            </td>
+            <td>@Html.ActionLink("Editar", "Edit", new { cId = ciudad.Id })</td>
+        </tr>
+        }
+    </table>

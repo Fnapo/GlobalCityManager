@@ -1,0 +1,16 @@
+<html>
+<!-- Usamos una tabla como navegador. -->
+<table>
+    <tr>
+        <td>@Html.ActionLink("#Inicio", "Index", "Home")</td>
+        <td>@Html.ActionLink("#Países", "Index", "Country")</td>
+        <td>@Html.ActionLink("#Ciudades", "Index", "City")</td>
+    </tr>
+</table>
+<hr> @RenderBody()
+<hr>
+<footer>
+    Bienvenidos a mi Página Web. (@DateTime.Now)
+</footer>
+
+</html>

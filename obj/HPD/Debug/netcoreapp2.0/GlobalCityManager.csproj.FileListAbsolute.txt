@@ -1,0 +1,11 @@
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\bin\HPD\Debug\netcoreapp2.0\GlobalCityManager.deps.json
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\bin\HPD\Debug\netcoreapp2.0\GlobalCityManager.runtimeconfig.json
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\bin\HPD\Debug\netcoreapp2.0\GlobalCityManager.runtimeconfig.dev.json
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\bin\HPD\Debug\netcoreapp2.0\GlobalCityManager.dll
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\bin\HPD\Debug\netcoreapp2.0\GlobalCityManager.pdb
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.csprojAssemblyReference.cache
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.csproj.CoreCompileInputs.cache
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.AssemblyInfoInputs.cache
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.AssemblyInfo.cs
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.dll
+C:\x-mvc\Projects\Lab_Starter_Files\Module_5\Start\GlobalCityManager\obj\HPD\Debug\netcoreapp2.0\GlobalCityManager.pdb

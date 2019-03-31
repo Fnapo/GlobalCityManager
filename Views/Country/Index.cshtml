@@ -1,0 +1,35 @@
+@model List<GlobalCityManager.Models.Country>
+
+    <h1>Todos los Países</h1>
+    @Html.ActionLink("Crear un nuevo País.", "Create")
+    <br>
+    <br>
+    <table border="1">
+        <tr>
+            <th>Código</th>
+            <th>Nombre</th>
+            <th>Región</th>
+            <th>Bandera</th>
+            <th>Borrar</th>
+            <th>Editar</th>
+            <th>Ciudades</th>
+        </tr>
+        @foreach (var pt in Model) {
+        <tr>
+            <td>@pt.Code</td>
+            <td>@pt.Name</td>
+            <td>@pt.Region</td>
+            <td><img src="@pt.NationalFlag" height="101" width="150"/></td>
+            <td>
+                @{
+                    if(pt.Code == "AAA"){
+                        @Html.ActionLink("Borrar", "Borrar",  new { pcode = pt.Code })
+                    }
+                    else { <span>--</span> }
+                }
+            </td>
+            <td>@Html.ActionLink("Editar", "Edit", new { pcode = pt.Code })</td>
+            <td>@Html.ActionLink("Ciudades", "IndexPais", "City", new { pcode = pt.Code })</td>
+        </tr>
+        }
+    </table>

@@ -1,0 +1,36 @@
+@using GlobalCityManager.Extensiones 
+@model GlobalCityManager.Models.Country
+
+<html>
+    <body>
+        <h1>Crear un País</h1>
+        <form action="" method="POST" enctype="multipart/form-data">
+            <table>
+                <tr>
+                    <td><b>Código</b></td>
+                    <td>@Html.TextBoxFor(pais=>pais.Code,
+                        new {pattern="[A-Za-z]{3}", required="required", placeholder="ABC", title="Un código de País son tres letras"})</td>
+                </tr>
+                <tr>
+                    <td><b>@Html.LabelFor(pais=>pais.Name)</b></td>
+                    <td>@Html.TextBoxFor(pais=>pais.Name,
+                        new {pattern="[A-Z].*", required="required", title="Un nombre siempre comienza con mayúscula"})</td>
+                </tr>
+                <tr>
+                    <td><b>Región</b></td>
+                    <td>
+                        @Html.DropDownListFor(r=>r.Region, new SelectList(ListaModelos.obtenerListaRegiones(), "Nombre", "Nombre"))
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Bandera Nacional</b></td>
+                    <td><input type="file" name="fichero" accept="image/*"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" value="Crear" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

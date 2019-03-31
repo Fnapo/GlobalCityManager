@@ -1,0 +1,34 @@
+@using GlobalCityManager.Extensiones 
+@model GlobalCityManager.Models.City
+
+<h1>Crear una Ciudad</h1>
+@using (Html.BeginForm()) {
+    <table>
+        <tr>
+            <td>@Html.LabelFor(ciudad=>ciudad.Name)</td>
+            <td>@Html.TextBoxFor(ciudad=>ciudad.Name,
+                new { pattern="[A-Z].*", required="required", title="Un nombre siempre comienza con mayúscula" })</td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(ciudad=>ciudad.CountryCode)</td>
+            <td>
+                @Html.DropDownListFor(ciudad=>ciudad.CountryCode, new SelectList(AccionesPaises.obtenerListaPaises(), "Code", "Name"), new{ required="required"} )
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(ciudad=>ciudad.District)</td>
+            <td>
+                @Html.DropDownListFor(ciudad=>ciudad.District, new SelectList(ListaModelos.obtenerListaDistritos(), "Nombre", "Nombre"), new{ required="required"} )
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(ciudad=>ciudad.Population)</td>
+            <td>@Html.TextBoxFor(ciudad=>ciudad.Population, 
+                new { pattern="[1-9][0-9]*", required="required", title="Número mayor que cero o no debe empezar por cero" })</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Crear" /></td>
+        </tr>
+    </table>
+}
